@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Présentation</title>
+
+<style>
+
+
+</style>
+</head>
+
+<body>
+
+<!-- PARAGRAPHE 1 -->
+
+<section class="section hidden">
+
+<div class="gallery">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+</div>
+
+<div class="text">
+<p>
+La ferme développe plusieurs activités agricoles destinées
+à améliorer la production alimentaire locale et soutenir
+le développement rural.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 2 -->
+
+<section class="section reverse hidden">
+
+<div class="gallery">
+<img src="img5.jpg">
+<img src="img6.jpg">
+<img src="img7.jpg">
+<img src="img8.jpg">
+</div>
+
+<div class="text">
+<p>
+Les activités agricoles comprennent la culture des produits
+vivriers ainsi que l’élevage, permettant à la ferme
+d’offrir des produits frais et de qualité.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 3 -->
+
+<section class="section hidden">
+
+<div class="gallery">
+<img src="img9.jpg">
+<img src="img10.jpg">
+<img src="img11.jpg">
+<img src="img12.jpg">
+</div>
+
+<div class="text">
+<p>
+La ferme investit également dans des projets agricoles
+innovants afin d'améliorer la production et de soutenir
+le développement économique local.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 4 -->
+
+<section class="section reverse hidden">
+
+<div class="gallery">
+<img src="img13.jpg">
+<img src="img14.jpg">
+<img src="img15.jpg">
+<img src="img16.jpg">
+</div>
+
+<div class="text">
+<p>
+Grâce à ses projets agricoles et ses activités,
+la ferme contribue à la sécurité alimentaire
+et au développement durable des communautés locales.
+</p>
+</div>
+
+</section>
+
+<script>
+
+/* Animation au scroll */
+
+const elements = document.querySelectorAll('.hidden');
+
+function showOnScroll(){
+
+const trigger = window.innerHeight * 0.85;
+
+elements.forEach(el => {
+
+const top = el.getBoundingClientRect().top;
+
+if(top < trigger){
+el.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll', showOnScroll);
+
+</script>
+
+</body>
+</html>

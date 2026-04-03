@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+
+<title>C.C.A.N Ferme Monseigneur</title>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-brand">
+<img src="Images/logo blanc.JPG" class="header-logo">
+<span class="header-nom">C.C.A.N Ferme Monseigneur</span>
+</div>
+
+<button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+
+<nav id="main-nav">
+<a href="accueil.html">Accueil</a>
+<a href="produits.html">Produits</a>
+<a href="galerie.html">Galerie</a>
+<a href="projets.html">Projets</a>
+<a href="àpropos.html">À propos</a>
+<a href="actu.html">Actualités</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+ 
+<body>
+
+<!-- PARAGRAPHE 1 -->
+
+<section class="section hidden">
+
+<div class="gallery">
+<img src="Images/RDC localisation.jpeg">
+<img src="Images/production huile1.jpeg">
+<img src="Images/traction animale3.jpeg">
+<img src="Images/mais2.jpeg">
+</div>
+
+<div class="text">
+<p>
+C.C.A.N Ferme Monseigneur, une entreprise agricole implantée au cœur du Kasai-Oriental dans la ville de Mbujimayi, en République Démocratique du Congo. Avec plusieurs hectares de terres riches et exploitées avec soin, nous avons fait de l’agriculture et de l’élevage notre passion et notre mission : nourrir les familles, soutenir l’économie locale et promouvoir une agriculture durable et moderne.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 2 -->
+
+<section class="section reverse hidden">
+
+<div class="gallery">
+<img src="Images/poules.jpeg
+">
+<img src="Images/manioc2.jpeg">
+<img src="Images/mais1.jpeg">
+<img src="Images/regimes de noix.jpeg">
+</div>
+
+<div class="text">
+<p>
+Notre ferme se distingue par la diversité de ses productions. Nous élevons de la volaille et cultivons des produits essentiels tels que le manioc, le maïs et le palmier à huile. Ces activités sont menées avec rigueur et expertise afin de garantir des produits frais, nutritifs et accessibles. Chaque récolte et chaque élevage reflètent notre engagement envers la qualité et la sécurité alimentaire.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 3 -->
+
+<section class="section hidden">
+
+<div class="gallery">
+<img src="Images/Matamba.jpeg">
+<img src="Images/al poules.jpeg">
+<img src="Images/huile de palme.jpeg">
+<img src="Images/farines.jpeg">
+</div>
+
+<div class="text">
+<p>
+Nous proposons également une gamme variée de produits transformés qui facilitent la vie quotidienne :  les feuilles de manioc pilées (PONDU) prêtes à l’emploi, l’huile de palme, les farines de maïs et de manioc ainsi que des aliments équilibrés pour nourrir la volaille et les porcs. Ces produits sont conçus pour répondre aux besoins des ménages, des commerçants et des exploitants agricoles, tout en valorisant les ressources locales et en offrant des solutions pratiques et nutritives.
+</p>
+</div>
+
+</section>
+
+<!-- PARAGRAPHE 4 -->
+
+<section class="section reverse hidden">
+
+<div class="gallery">
+<img src="Images/Traction animale1.jpeg">
+<img src="Images/traction animale3.jpeg">
+<img src="Images/traction animale2.jpeg">
+
+</div>
+
+<div class="text">
+<p>
+C.C.A.N Ferme Monseigneur met en avant l’utilisation de la traction animale grâce aux bœufs, une méthode traditionnelle et efficace qui permet de travailler la terre de manière respectueuse et durable. Cette pratique illustre notre volonté de combiner savoir-faire ancestral et innovation moderne pour bâtir une agriculture solide, au service de la communauté et des générations futures.
+</p>
+</div>
+
+</section>
+
+<script>
+
+const elements = document.querySelectorAll('.section, .card, .hero');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+elements.forEach(el => observer.observe(el));
+observer.takeRecords();
+elements.forEach(el => {
+  if(el.getBoundingClientRect().top < window.innerHeight){
+    el.classList.add('visible');
+  }
+});
+
+function toggleMenu(){
+  document.getElementById('main-nav').classList.toggle('open');
+}
+
+</script>
+
+</body>
+
+</section>
+
+<section class="section">
+
+<h2>Nos activités agricoles principales</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Culture</h3>
+<p>Production de légumes et fruits frais.</p>
+</div>
+
+<div class="card">
+<h3>Élevage</h3>
+<p>Élevage de volailles et autres animaux.</p>
+</div>
+
+<div class="card">
+<h3>Projets agricoles</h3>
+<p>Développement de nouvelles infrastructures agricoles.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-column">
+<h3>C.C.A.N Ferme Monseigneur</h3>
+<p></p>
+<p>Agriculture durable et production locale.</p>
+<img src="Images/logo noir.JPG" style="width:3cm;">
+</div>
+
+<div class="footer-column">
+<h3>Navigation</h3>
+<a href="accueil.html">Retourner en haut de la page</a>
+<a href="produits.html">Produits</a>
+<a href="#">Galerie</a>
+<a href="projets.html">Projets</a>
+<a href="#">Actualités</a>
+</div>
+
+<div class="footer-column">
+<h3>Contacts</h3>
+<p>Téléphone : +243 980 002 003</p>
+<p>Email :ccan@gmail.com</p>
+<p>Adresse : Mbujimayi K-OR, RDC</p>
+</div>
+
+<div class="footer-column">
+<h3>Commande</h3>
+<p> Faites votre panier en ligne</p>
+<a href="https://wa.me/243980002003" class="btn-commander">
+ Via Whatsapp ICI
+</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>© 2026 C.C.A.N Ferme Monseigneur — Tous droits réservés</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
