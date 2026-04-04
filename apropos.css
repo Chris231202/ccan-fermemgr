@@ -1,0 +1,412 @@
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#f9f9f7;
+    color:#2d2d2d;
+}
+
+/* HEADER */
+
+header{
+    background:#1a1a1a;
+    padding:12px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-logo{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.header-nom{
+    font-family:'Georgia', serif;
+    font-size:20px;
+    font-weight:700;
+    color:#a8d5a2;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:0.5px;
+    transition:color 0.3s;
+}
+
+nav a:hover{
+    color:#a8d5a2;
+}
+
+/* HERO */
+
+.hero-apropos{
+    background:linear-gradient(135deg, #2e4a2e, #4a7c59);
+    padding:100px 10%;
+    color:white;
+}
+
+.hero-text h1{
+    font-size:48px;
+    font-weight:700;
+    margin:0 0 15px 0;
+    letter-spacing:1px;
+}
+
+.hero-text p{
+    font-size:18px;
+    opacity:0.85;
+    max-width:500px;
+    line-height:1.6;
+}
+
+/* SECTIONS HISTOIRE / MISSION */
+
+.apropos-section{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    padding:80px 10%;
+    background:#ffffff;
+    border-bottom:1px solid #ebebeb;
+}
+
+.apropos-section.reverse{
+    flex-direction:row-reverse;
+    background:#f4f4f0;
+}
+
+.apropos-img{
+    flex-shrink:0;
+}
+
+.apropos-img img{
+    width:380px;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.apropos-text .label{
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#4a7c59;
+}
+
+.apropos-text h2{
+    font-size:30px;
+    margin:10px 0 20px 0;
+    color:#1a1a1a;
+}
+
+.apropos-text p{
+    line-height:1.8;
+    font-size:16px;
+    color:#555;
+    max-width:500px;
+}
+
+/* VALEURS */
+
+.valeurs-section{
+    padding:80px 10%;
+    background:#2e4a2e;
+    text-align:center;
+}
+
+.section-title{
+    font-size:32px;
+    color:#ffffff;
+    margin-bottom:50px;
+}
+
+.valeurs-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.valeur-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    padding:35px 25px;
+    width:250px;
+    color:white;
+    transition:transform 0.3s;
+}
+
+.valeur-card:hover{
+    transform:translateY(-5px);
+}
+
+.valeur-icon{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.valeur-card h3{
+    font-size:20px;
+    margin:0 0 12px 0;
+}
+
+.valeur-card p{
+    font-size:14px;
+    line-height:1.7;
+    opacity:0.8;
+}
+
+/* ÉQUIPE */
+
+.equipe-section{
+    padding:80px 10%;
+    background:#f9f9f7;
+    text-align:center;
+}
+
+.equipe-section .section-title{
+    color:#1a1a1a;
+}
+
+.equipe-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.membre-card{
+    background:#ffffff;
+    border-radius:12px;
+    padding:30px 20px;
+    width:220px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.07);
+    transition:transform 0.3s;
+}
+
+.membre-card:hover{
+    transform:translateY(-5px);
+}
+
+.membre-card img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+    border:3px solid #a8d5a2;
+}
+
+.membre-card h3{
+    margin:0 0 5px 0;
+    font-size:17px;
+    color:#1a1a1a;
+}
+
+.membre-card .role{
+    color:#4a7c59;
+    font-size:13px;
+    font-weight:600;
+    margin:0 0 10px 0;
+}
+
+.membre-card p{
+    font-size:13px;
+    color:#777;
+    line-height:1.6;
+}
+
+/* CHIFFRES CLÉS */
+
+.chiffres-section{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:0;
+    background:#1a1a1a;
+    padding:60px 10%;
+}
+
+.chiffre{
+    text-align:center;
+    padding:20px 50px;
+    color:white;
+    border-right:1px solid rgba(255,255,255,0.15);
+}
+
+.chiffre:last-child{
+    border-right:none;
+}
+
+.chiffre h2{
+    font-size:42px;
+    color:#a8d5a2;
+    margin:0 0 8px 0;
+}
+
+.chiffre p{
+    font-size:14px;
+    opacity:0.7;
+    margin:0;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* FOOTER */
+
+footer{
+    background:rgb(11,1,1);
+    color:white;
+    padding:40px 20px;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.footer-column{
+    width:250px;
+    margin-bottom:20px;
+}
+
+.footer-column h3{
+    margin-bottom:15px;
+}
+
+.footer-column a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding-top:15px;
+}
+
+/* ANIMATION SCROLL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* HAMBURGER */
+
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:#ffffff;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+    flex-wrap:wrap;
+    padding:12px 20px;
+}
+
+.hamburger{
+    display:block;
+}
+
+#main-nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#1a1a1a;
+    padding:10px 0;
+}
+
+#main-nav.open{
+    display:flex;
+}
+
+#main-nav a{
+    margin:0;
+    padding:10px 20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    font-size:15px;
+}
+
+.hero-text h1{
+    font-size:30px;
+}
+
+.apropos-section{
+    flex-direction:column;
+    padding:50px 5%;
+}
+
+.apropos-section.reverse{
+    flex-direction:column;
+}
+
+.apropos-img img{
+    width:100%;
+    height:200px;
+}
+
+.valeurs-grid, .equipe-grid{
+    flex-direction:column;
+    align-items:center;
+}
+
+.chiffres-section{
+    flex-direction:column;
+    align-items:center;
+}
+
+.chiffre{
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    padding:20px;
+}
+
+.footer-container{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.footer-column{
+    width:100%;
+}
+
+}

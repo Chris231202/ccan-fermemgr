@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos - C.C.A.N Ferme Monseigneur</title>
+<link rel="stylesheet" href="apropos.css">
 </head>
+
 <body>
-    
+
+<header>
+
+<div class="header-brand">
+<img src="Images/logo noir.JPG" class="header-logo">
+<span class="header-nom">C.C.A.N Ferme Monseigneur</span>
+</div>
+
+<button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+
+<nav id="main-nav">
+<a href="index.html">Accueil</a>
+<a href="produits.html">Produits</a>
+<a href="projets.html">Projets</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero-apropos reveal">
+<div class="hero-text">
+<h1>À propos de nous</h1>
+<p>Découvrez l'histoire, la mission et les valeurs de C.C.A.N Ferme Monseigneur.</p>
+</div>
+</section>
+
+<!-- NOTRE HISTOIRE -->
+
+<section class="apropos-section reveal">
+<div class="apropos-img">
+<img src="Images/" alt="Notre histoire">
+</div>
+<div class="apropos-text">
+<span class="label">Notre histoire</span>
+<h2>Une ferme née d'une passion</h2>
+<p>Paragraphe à compléter sur l'histoire de la ferme, ses origines, sa fondation et son évolution au fil des années.</p>
+</div>
+</section>
+
+<!-- NOTRE MISSION -->
+
+<section class="apropos-section reverse reveal">
+<div class="apropos-img">
+<img src="Images/" alt="Notre mission">
+</div>
+<div class="apropos-text">
+<span class="label">Notre mission</span>
+<h2>Nourrir et développer la communauté</h2>
+<p>Paragraphe à compléter sur la mission de la ferme, ses objectifs agricoles et son engagement envers la communauté locale.</p>
+</div>
+</section>
+
+<!-- NOS VALEURS -->
+
+<section class="valeurs-section reveal">
+<h2 class="section-title">Nos valeurs</h2>
+<div class="valeurs-grid">
+
+<div class="valeur-card">
+<div class="valeur-icon">🌱</div>
+<h3>Durabilité</h3>
+<p>Paragraphe à compléter sur l'engagement envers une agriculture durable et respectueuse de l'environnement.</p>
+</div>
+
+<div class="valeur-card">
+<div class="valeur-icon">🤝</div>
+<h3>Communauté</h3>
+<p>Paragraphe à compléter sur le soutien à la communauté locale et les partenariats développés.</p>
+</div>
+
+<div class="valeur-card">
+<div class="valeur-icon">⭐</div>
+<h3>Qualité</h3>
+<p>Paragraphe à compléter sur l'engagement envers la qualité des produits et des pratiques agricoles.</p>
+</div>
+
+</div>
+</section>
+
+<!-- NOTRE ÉQUIPE -->
+
+<section class="equipe-section reveal">
+<h2 class="section-title">Notre équipe</h2>
+<div class="equipe-grid">
+
+<div class="membre-card">
+<img src="Images/" alt="Membre 1">
+<h3>Mulumba Marcel</h3>
+<p class="role">Chef / Manager</p>
+<p>CEO Founder</p>
+</div>
+
+<div class="membre-card">
+<img src="Images/" alt="Membre 2">
+<h3>Ciunza Christian</h3>
+<p class="role">IT / Informaticien</p>
+<p>Gestionnaire du parc Informatique de l'entreprise</p>
+</div>
+
+<div class="membre-card">
+<img src="Images/" alt="Membre 3">
+<h3>Felly kkkkkk</h3>
+<p class="role">Rôle / Poste</p>
+<p>chargé de la gestion courante</p>
+</div>
+
+</div>
+</section>
+
+<!-- CHIFFRES CLÉS -->
+
+<section class="chiffres-section reveal">
+<div class="chiffre">
+<h2>100</h2>
+<p>Hectares cultivés</p>
+</div>
+<div class="chiffre">
+<h2>+8</h2>
+<p>Années d'expérience</p>
+</div>
+<div class="chiffre">
+<h2>+500</h2>
+<p>Familles approvisionnées</p>
+</div>
+<div class="chiffre">
+<h2>+5</h2>
+<p>Produits disponibles</p>
+</div>
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-column">
+<h3>C.C.A.N Ferme Monseigneur</h3>
+<p>Agriculture durable et production locale.</p>
+<img src="images/logo noir.JPG" style="width:3cm;">
+</div>
+
+<div class="footer-column">
+<h3>Navigation</h3>
+<a href="index.html">Accueil</a>
+<a href="produits.html">Produits</a>
+<a href="projets.html">Projets</a>
+</div>
+
+<div class="footer-column">
+<h3>Contacts</h3>
+<p>Téléphone : +243 980 002 003</p>
+<p>Email : ccan@gmail.com</p>
+<p>Adresse : Mbujimayi K-OR, RDC</p>
+</div>
+
+<div class="footer-column">
+<h3>Commande</h3>
+<p>Faites votre panier en ligne</p>
+<a href="https://wa.me/243980002003">Via Whatsapp ICI</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 C.C.A.N Ferme Monseigneur — Tous droits réservés</p>
+</div>
+
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+reveals.forEach(el => {
+  if(el.getBoundingClientRect().top < window.innerHeight){
+    el.classList.add('visible');
+  }
+});
+
+function toggleMenu(){
+  document.getElementById('main-nav').classList.toggle('open');
+}
+</script>
+
 </body>
 </html>

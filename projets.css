@@ -97,6 +97,46 @@ color:#1b5e20;
 line-height:1.6;
 }
 
+/* ANIMATION SCROLL */
+
+.project-card, .info-section{
+opacity:0;
+transform:translateY(40px);
+transition:opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.visible, .info-section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SECTIONS COLORÉES */
+
+.info-section{
+display:flex;
+align-items:center;
+gap:40px;
+padding:60px 10%;
+}
+
+.info-section img{
+width:200px;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+flex-shrink:0;
+}
+
+.info-text h2{
+margin-top:0;
+color:#3a3a3a;
+}
+
+.info-text p{
+line-height:1.7;
+color:#4a4a4a;
+}
+
 /* FOOTER */
 
 footer{
